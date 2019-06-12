@@ -203,6 +203,8 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
 ### string方法
     - str.charAt(5);返回第5个字符
     - str.charCodeAt(5);返回对应字符串的unicode码
+    - str.indexOf()
+    - str.lastIndexOf()
     - toUpperCase() 大写
 	- toLowerCase() 小写
     - substr(起始位置,[取的个数])
