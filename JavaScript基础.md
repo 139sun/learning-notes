@@ -207,9 +207,9 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - str.lastIndexOf()
     - toUpperCase() 大写
 	- toLowerCase() 小写
-    - substr(起始位置,[取的个数])
-    - concat()
-    - slice()
+    - str.substr(起始位置,[取的个数])
+    - str.concat(str2)
+    - str.slice(起始位置,结束位置(不包括))
 ### 冒泡排序
 
  // 给定一个数组,由小到大进行排序               //总共需要比较n*(n-1)/2次,n为数组元素个数
