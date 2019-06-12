@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阶乘和</title>
+</head>
+<body>
+    <script>
+        // 阶乘
+        function jc(n){
+            // jc(n) = jc(n - 1) * n
+            var y = n == 1? 1: jc(n - 1) * n;
+            return y;
+        }
+        console.log(jc(4));
+
+        //阶乘和
+        function jche(m){
+            var y = m == jc(1) ? 1 : jche(m - 1) + jc(m); 
+            return  y ;
+        }
+        console.log(jche(4));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3.找到数组中每个字母出现的次数
+       
+            function foo2(arr2){
+               while(arr2.length > 0){
+                            var j = 0;       
+                    for( var  z = arr2.indexOf(arr2[0]); z != -1;j++){
+                        // arr3.unshift(arr2[i]);
+                        var tamp = arr2[z]
+                        arr2.splice(z,1);
+                        z = arr2.indexOf(tamp)
+
+                    }
+                    console.log(tamp +':'+j+'次');
+                }
+            }
+            var arr2 =   ["c","a","z","a","a"]  ; 
+            foo2(arr2);
+    </script>
+</body>
+</html>

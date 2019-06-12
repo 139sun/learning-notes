@@ -1,4 +1,4 @@
-## 表单<form>
+### 表单<form>
 *登记页面*
 
 <form action="" method="get"> 
@@ -73,8 +73,10 @@
 
 ###标签
 - pre标签 块状元素 常用来表示计算机源代码 只能包含文本或者行内元素,不会改变原有格式
+- sub 下标 ;sup 上标
+  - H<sub>2</sub>SO<sup>4</sup>
 
->alt="图片未找到的代替申明"
+
 ###字体标签
 <em> 斜体 </em>
 <strong> 强调</strong>
@@ -91,10 +93,11 @@
    _blank 空白页面跳转	
 
 ### iframe内联框架 (画中画)
- <iframe src="https://www.baidu.com"  framebord=2px width=200px height=100px target="-blank"></iframe>  <br>
-target="" _self
-		_top
-		_father
+ <iframe src="https://www.baidu.com"  framebord=2px width=200px height=100px target="-blank">
+ </iframe>  <br>
+	- target=""   _self
+			     _top
+				 _father
 
 
 ###元素种类
@@ -186,7 +189,8 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 - 只有在碰到父类盒子或者浮动的另一个元素才会停下来
 - 浮动之后属性变为块状元素,即使设置display:inline 也无法改变
 - 当一个元素浮动之后,宽度会被内容撑开,所以要在浮动之前设置盒子宽度
-- 在最后一个盒子设置clear属性来清除浮动对父类盒子的影响
+- 在父类盒子最后添加一个空盒子设置clear属性来清除浮动对父类盒子高度的影响
+- 子类盒子若有一个设置浮动,所有盒子都得设置浮动,所以不到不得已不用浮动和定位,尽量用文档流
 
 ### 定位 position
 - 相对定位 relative
@@ -194,4 +198,42 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 - 固定定位 fixed
 - staic 默认值 无定位
 - inherit 从父元素继承定位属性
+
+
+
+### 弹性盒子flexibl box
+	- 组成 flex容器(container) flex项目(item)item
+		水平的主轴(main axis) 与主轴垂直的交叉轴(cross axis)
+	- 容器的属性
+		- flex-direction
+			- 决定主轴(即项目)的方向
+			- row(默认)	row-reverse column colunm-reverse
+		- flex-wrap
+			换行的方式:nowrap(默认 不换行) wrop wrop-reverse(换行,第一行在下方)
+		- flex-flow : (默认 row nowrop)
+		- justify-content  项目在主轴上的对齐方式
+			- flex-star 
+			- flex-end 
+			- center 
+			- space-between 挨着两边 项目之间距离相等
+			- space-around
+		- align-items 项目在交叉轴上的对齐方式
+			flex-star flex-end  center 
+			baseline(项目 第一行的文字基线) stretch
+		- align-content 多根轴线的对齐方式
+		flex-star flex-end center space-around space-between stretch
+	- 项目的属性
+		- order	项目的排列顺序 123 越小越靠前 默认0
+		- flex-grow	 项目的放大比例 默认0 不放大
+		- flex-shrink 项目的缩小比例  默认1 空间不足比例缩小
+		- flex-basis	分配空间之前项目占据主轴空间,默认auto 即项目本来的空间
+		- flex 以上三个的简写 默认( 0 1 auto) 
+		auto(1 1 auto)	none(0 0 auto)
+		- lign-self 单个项目与其它项目不同的对齐方式 	可覆盖align-items属性
+			- auto(默认,继承父元素align-items属性,若无,等同于stretch)
+			- flex-star 
+			- flex-end
+			- center
+			- stretch
+			- baseline
 

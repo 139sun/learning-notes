@@ -1,0 +1,239 @@
+.main{
+			width: 1200px;
+			height: 100%;
+			margin:0 auto;
+			position: relative;
+		}
+		.header{
+			height: 80px;
+		}
+		
+		.header .logo{
+			float: left;
+			width: 177px;
+			height: 42px;
+			background: #fff url(../img/logo.png) 0 0 no-repeat;
+			margin-left: 67px;
+			margin-top: 23px;
+		}
+		.header .nav{
+			height: 100%;
+			width: 708px;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			/*background-color: pink;*/
+		}
+		.nav .bar{
+			position: relative;
+			float: left;
+			width: 4em;
+			height: 22px;
+			margin-left: 24px;
+			margin-right: 60px;
+			margin-top: 33px;
+			
+		}
+		.nav a{
+			font:16px/1 PingFangSC;
+			color: #666666;
+		}
+		.nav .line{
+			display: none;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 4em;
+			height: 1px;
+			background-color: #b9ab77;
+		}
+		.nav .b0, .nav .w0{
+			width: 2em;
+		}
+		.nav .bar:hover a{
+			color: black;
+		}
+		.nav .bar:hover .line{
+			display: block;
+		}
+		.nav .bar.active a{
+			color: black;
+		}
+		.nav .bar.active .line{
+			display: block;
+		}
+		.more{
+			display: block;
+			width: 150px;
+			height: 45px;
+			border: 1px solid #f5f5f5;
+			text-align: center;
+			line-height: 45px;
+			margin:0 auto;
+			margin-bottom: 60px;
+			font-size: 12px;
+			color:white;
+			clear: both;
+		}
+		
+		.her .model1{
+			position: relative;
+			margin-top: 100px;
+			width: 100%;
+			height: 830px;
+			background: #fff url(../img/w1.png) 0 0 no-repeat;
+		}
+		.model1 .details{
+			width: 416px;
+			height: 367px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			// text-align: center;
+		}
+		.details .right{
+			text-align: right;
+			margin-right: 190px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		.details h1{
+			color:black;
+			font-size: 30px;
+			font-weight: bolder;
+		}
+		.details h2{
+			font-size: 16px;
+			color:#4c4c4c;
+		}
+		.details h3{
+			font-size: 16px;
+			color:#cacaca;
+		}
+
+		.details p{
+			font-size: 14px;
+			color:#cacaca;
+
+		}
+		.details .order{
+			display: block;
+			margin:0 auto;
+			margin-top: 60px;
+			width: 150px;
+			height: 45px;
+			border: 1px solid #f5f5f5;
+			text-align: center;
+			line-height: 45px;
+			color:#2d2d2d;
+			font-size: 12px;
+		}
+		.her .w2{
+			
+			width: 708px;
+			height: 780px;
+			background: #fff url(../img/w2.png) 0 0 no-repeat;
+		}
+		.model2 .introduce{
+			width: 708px;
+			margin-top: 60px;
+			color:#777777;
+			line-height: 25px;
+			font-size: 14px;
+			margin-bottom: 55px;
+			
+			// height: 206px;
+			
+			
+		}
+		.variety{
+			background-color: #dddddd;
+		}
+		.variety .content{
+			position: relative;
+			padding-top: 100px;
+		}
+		.variety .dia{
+			display: inline-block;
+			text-align: center;
+			line-height: 30px;
+			font-size: 12px;
+			color:#929292;
+			background-color: #fff;
+			margin-bottom: 40px;
+			
+		}
+		.variety .d1{
+		width: 75px;
+		height: 30px;
+		}
+		.variety .d2{
+		width: 40px;
+		margin-left: 40px;
+		height: 30px;
+		}
+		
+		.variety .pic{
+			float: left;
+			width: 160px;
+			height: 220px;
+			margin-bottom: 60px;
+			margin-left: 48px;
+		}
+		.variety .p1{
+			background: #fff url(../img/p1.png) 0 0 no-repeat;
+			margin-left: 0;
+		}
+		.variety .p2{
+			background: #fff url(../img/p2.png) 0 0 no-repeat;
+		}
+		.variety .p3{
+			background: #fff url(../img/p3.png) 0 0 no-repeat;
+		}
+		.variety .p4{
+			background: #fff url(../img/p4.png) 0 0 no-repeat;
+		}
+		.variety .p5{
+			background: #fff url(../img/p5.png) 0 0 no-repeat;
+		}
+		.variety .p6{
+			background: #fff url(../img/p6.png) 0 0 no-repeat;
+		}
+		.variety .arr{
+			display: block;
+			width: 32px;
+			height: 50px;
+		}
+		.variety .pre{
+			background: #fff url(../img/左箭头.png) 0 0 no-repeat;
+			position: absolute;
+			top:281px;
+			left: -46px;
+		}
+		.variety .next{
+			background: #fff url(../img/右箭头.png) 0 0 no-repeat;
+			position: absolute;
+			top:281px;
+			right: -46px;
+		}
+		.footer{
+			position: relative;
+			height: 100px;
+			font-size: 12px;
+			line-height: 26px;
+			color:#ffffff;
+			background-color: #4d4d4d;
+		}
+		.footer .relation{
+			position: absolute;
+			line-height: 100px;
+			right: 0;
+			top: 0;
+		
+			
+		}
+		.footer a{
+			display: inline-block;
+			margin-left: 60px;
+			color:#ffffff;
+		}

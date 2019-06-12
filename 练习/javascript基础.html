@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 通过外链引入.js 标签内语句不再执行 -->
+    <script src="test.js">console.log (0);
+    </script>
+    <script> console.log(999);</script>
+</head>
+<body>
+    <!-- .js 不要忘了分号; -->
+   
+    <script> 
+    <!-- 输出语句 -->
+    /*alert ('欢迎来到不凡学院');
+    prompt ('请输入姓名');
+    document.write('孙度');
+    console.log('孙度');*/
+
+        
+    </script>
+    <!-- 变量命名 -->
+    <script>
+        /*变量命名规则:字母,数字,下划线 $
+        严格区分大小写 不能使用数字开头 不能使用保留字 驼峰命名
+        语义化命名*/
+        var  introduce = '我们都有"一个家"';//单双引号可以嵌套使用,不能混用
+        var firstName = '诸葛';
+        var first_name = '欧阳'
+        var first = 66666;
+        // 同时命名多个变量
+        var a = function foo() {
+            name : "peter"
+        }, b = [1,2,3];
+        
+        console.log(introduce);//我们都有"一个家"
+        console.log(first_name);//诸葛
+        console.log(firstName);//欧阳
+        //判断数据类型:typeof
+        console.log(true);
+        console.log(typeof(true));//boolean
+        console.log(typeof(introduce));//string
+        console.log(typeof(first));//number
+        console.log(typeof(''));//string
+        console.log(null);     //null
+        console.log(typeof(null));//object
+        console.log(typeof(wtf));//undefined
+        console.log(undefined);//undefined
+        console.log(typeof(undefined));//undefined
+        console.log(typeof(Infinity));//number
+        //计算不出结果,返回NaN
+        console.log(firstName-introduce);//NaN
+    </script>
+<!-- 数据类型转换 -->
+     <!-- isNaN函数 -->
+     <script>
+         console.log(isNaN(null));//false
+         console.log(isNaN(true));//false
+         console.log(isNaN(false));//false   false值为0
+         console.log(isNaN('hru'));//true
+     </script>
+
+    
+   <!-- 转换为string类型 -->
+   <!-- boolean.toString()函数/ "+string"拼接 -->boolean
+   <!-- null boolean undefined number =====> -->
+    <script> 
+    console.log(null + "这是一个尾巴");
+    console.log(false.toString());//'false'
+    console.log('anyone' + undefined);//anyoneundefined
+    console.log(1 + '不凡学院');
+    
+    </script>
+    <!-- <!-- 转换为number类型 -->
+     
+    <script>
+        // Number(数字类型的字符串) 
+        console.log(Number("wtf"));//NaN
+        console.log(Number("    123.94"));//123.94
+        console.log(Number(true));//1
+        console.log(Number(""));//0 
+        // <ParseInt()
+        console.log(parseInt("   1234a6"));//1234
+        console.log(parseInt(''));//NaN
+        // <!-- ParseFloat() -->
+        console.log(parseFloat("   123.4a6"));//123.4
+        console.log(parseFloat("   123.46.13"));//123.46
+    </script>
+
+    <!-- 转换为boolean 函数Boolean() -->
+    <script>
+    console.log(Boolean(0));//false
+    console.log(Boolean(999));//true
+    console.log(Boolean(NaN));//false
+    console.log(Boolean("wtf"));//true
+    console.log(Boolean(undefined));//false
+    console.log(Boolean({}));//true
+    console.log(Boolean(null));//false
+    console.log(Boolean(""));//false
+    </script>
+
+    <!-- 比较运算符 -->
+    <script>
+    console.log(3 > 5);
+    console.log(3 == 3);
+    console.log(3 === '3');//强制等于  false
+    console.log(6 > '5');
+    console.log('a' < 'b');
+    </script>
+    <script>
+    // 基本数据类型和引用数据类型
+    var person1 = {
+        name:'jeason'
+    }
+    var person2 = person1;
+    console.log(person2.name);//jeason
+    person1.name = 'jack';
+    console.log(person2.name);//jack
+    console.log(4%5);
+    </script>
+
+
+    <script>
+    var timer = Date();//返回一个字符串（string），没有getDate等日期对象方法，内容为当前时间
+    console.log(timer);
+    var date = new Date();
+    console.log(date);
+    var year = date.getFullYear();
+    var month = date.getMonth();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var milliSeconds = date.getMilliseconds();
+    var week = date.getDay();//一个月中的第几天
+    var day = date.getDate();//一周中的第几天
+    var stamp = date.getTime();
+    var timeStr = year +'-' +day+'-' + week;
+    console.log(timeStr);
+    console.log(stamp);
+    console.log(year - stamp);
+    </script>
+    <script> 
+     alert( 5 > 3 ? 'I love you!':'you are a bitch!');
+        // console.log(a);
+        var b = 3 < 5 ? 4:6;
+        console.log(b); 
+         if(5>3){                              // <===== 等价于
+            a = 'I love you';
+        }
+        else{
+            a ='you are a bitch!';
+        }
+        console.log(a);
+
+
+
+        var a1 = 'cat' && 'dog';
+        console.log(a1);
+        var a2 = 'cat' || 'dog';
+        console.log(a2);
+        console.log('cat' && 'dog');
+    
+
+        var arr = [1,2,3];
+        console.log(arr);
+        
+    </script>
+</body>
+</html>
