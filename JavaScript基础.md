@@ -203,13 +203,13 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
 ### string方法
     - str.charAt(5);返回第5个字符
     - str.charCodeAt(5);返回对应字符串的unicode码
-    - str.indexOf()
+    - str.indexOf()  //寻找字符的下标
     - str.lastIndexOf()
     - toUpperCase() 大写
 	- toLowerCase() 小写
-    - str.substr(起始位置,[取的个数])
     - str.concat(str2)
-    - str.slice(起始位置,结束位置(不包括))
+    - str.substr(起始位置,[取的个数])    //返回截取的片段,不改变元字符串
+    - str.slice(起始位置,结束位置(不包括)) //返回截取的片段,不改变原字符串
 ### 冒泡排序
 
  // 给定一个数组,由小到大进行排序               //总共需要比较n*(n-1)/2次,n为数组元素个数
@@ -266,6 +266,12 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     3. 参数
         - 形参,实参
             实参个数大于形参,会出现错误;实参小于形参,舍弃多余的实参
+        - 默认参数 
+                函数调用时缺少参数,会默认undefined
+                设置默认参数
+                function foo(y){
+                    y = y || 0 ;    //短路求值,若y已经定义,等于y;未定义,y为undefined,false,返回0; 
+                }
        
     4. 变量及作用域 
         - 数据类型
@@ -320,15 +326,15 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
             var obj = New Person();
              obj.say(); //调用方法
 ### JSON对象   文本传输格式
-    -   json键/值对组合中的键名写在前面并用双引号 "" 包裹，使用冒号 : 分隔
+    4.   json键/值对组合中的键名写在前面并用双引号 "" 包裹，使用冒号 : 分隔
     1. json字符串转换为json对象 JSON.parse(jsonStr)     
-    - var jsonStr = '{"name" : "zhangsan", "sex"  : "male","site" : "wudangshan" }';
+         - var jsonStr = '{"name" : "zhangsan", "sex"  : "male","site" : "wudangshan" }';
         var jsonObj = JSON.parse(jsonStr);  
 
-   2. json对象转换为json字符串 JSON.stringify(jsonStr)
-    -  var newStr = JSON.stringify(jsonObj);
+    2. json对象转换为json字符串 JSON.stringify(jsonStr)
+        -  var newStr = JSON.stringify(jsonObj);
          console.log(newStr);
     3. json的遍历
-    for(var key in jsonObj){
+        for(var key in jsonObj){
            console.log(jsonObj[key]); //key为变量,必须加[]
        }
