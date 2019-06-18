@@ -67,9 +67,43 @@
     4. 复制节点
     - node.cloneNode(true/false)
 ## 操作节点属性
-    - 设置：setAttribute(属性名称, 新的属性值)//所有属性值全部替换,不要忘记()
+    - 设置：setAttribute('属性名称', '新的属性值')//所有属性值全部替换,不要忘记()
     - 删除：removeAttribute(名称)            //所有属性值都被删除
-    - 获取  getAttribute(名称)               //所有属性值
+    - 获取  getAttribute('名称')               //所有属性值  返回string 
+    -  /**
+        * 添加一个类名的封装函数
+        * @param {*} el  要添加类名的节点
+        * @param {*} classVaule  要添加的类名
+        */
+    function addClass(el, classVaule){
+        var newStr = '';
+        var oldClass = el.getAttribute('class');
+        var oldArr  = oldClass.split(' ');
+        var result = oldArr.indexOf(classVaule);
+        if(result === -1){
+            // oldArr.push(classVaule);
+            // newStr = oldArr.join(' ');
+             newStr = oldClass +' '+ classVaule;
+            el.setAttribute('class',newStr);
+        }        
+    }
+    -  /**
+        * 删除一个类名的封装函数
+        * @param {*} el 要删除类名的节点
+        * @param {*} classVaule 要删除的类名
+        */
+        function delClass(el,classVaule){
+        var newStr = '';
+        var oldClass = el.getAttribute('class');
+        var oldArr = oldClass.split(' ');
+        var result = oldArr.indexOf(classVaule);
+        if(result !== -1){
+            oldArr.splice(result,1);
+            newStr = oldArr.join(' ');
+            el.setAttribute('class' , newStr);
+        }      
+    }
+
 
 ## 操作内容         
     - parentNOde.vaule = "内容"//只对表单生效
