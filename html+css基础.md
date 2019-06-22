@@ -54,6 +54,7 @@
 	</fieldset>
 		<input type="submit">
 </form>
+### 表格<table>
 
 ### 列表
 1. 有序列表/无序列表/自定义列表
@@ -103,7 +104,7 @@
 ###元素种类
 - 块状元素 自动换行 设置宽高有效
 ul ol div  table form h p
-- 行内块元素 不会自动换行 设置宽高有效
+- 行内块元素 不会自动换行 设置宽高有效(padding margin 左右有效,上下无效)
 img input button
 - 行内元素 不会自动换行 设置宽高无效
 a  span 
@@ -171,6 +172,10 @@ a  span
 - 并集选择器 ,
 - 交集选择器 
 - 后代选择器
+- 层选择器
+	- div+p div后所有兄弟p标签
+	- div~p div后下一个p标签
+	- div>p div里边所有的子p
 
 ### 背景图片
 background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll]
@@ -178,6 +183,7 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 - 盒子内部
 	- content:width height
 	- padding:top/right/bottom/left
+		- 三个数据时:上 左右 下
 	- border :5px solid red
 - 盒子外部
 	- margin:上下/左右
