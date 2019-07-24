@@ -29,12 +29,11 @@
 4. undefined
  定义了变量 未赋值
 5. null 
-9. Symbol
 复杂数据类型
 6. object 对象
 7. 数组 array
 8. 函数 function
-
+9. Symbol
 
 ### 数据类型转换
 1. 转number (数字类型的字符串)
@@ -114,8 +113,9 @@ console.log(a2);//cat
 }
 - do{}
     while();
-- for(){
-
+    //定义 条件 执行可省略
+- for(定义;条件;执行){
+    动作
 }
 
 ### 条件语句
@@ -157,7 +157,7 @@ console.log(a2);//cat
                 console.log(newArr[i])                
                 }
              }
-    - for(var index in newArr){                 //for in 循环常用于对象的遍历
+    - for(var index in newArr){                 //for in 循环常用于对象的遍历//不推荐
         console.log(index);                     //index 数组下标
         console.log(newArr[index]);             //空元素不会列出
     }
@@ -194,7 +194,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
              -    arr.sort(function(a,b){return a - b})
              -    arr.sort(function(a,b){return a.length - b.length})
 10. 查找元素在数组中的索引 ,没找到返回-1
-        - arr.indexOf(元素)
+        - arr.indexOf(元素)//无法识别NaN
         - arr.lastIndexOf(元素)从后找
 11.清空数组
     - arr = [];
@@ -208,7 +208,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - str.lastIndexOf()
     - toUpperCase() 大写
 	- toLowerCase() 小写
-    - str.concat(str2)
+    - str.concat(str2) 拼接字符串
     - str.substr(起始位置,[取的个数])    //返回截取的片段,不改变元字符串
     - str.slice(起始位置,结束位置(不包括)) //返回截取的片段,不改变原字符串
 ### 冒泡排序
@@ -229,7 +229,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
         console.log(arr);
 
 
-### 比较排序
+### 选择排序
  
     var arr = [99, 66, 12,58, 23, 15, 12];    
     for(i = 0 ; i < arr.length-1; i++ ){
@@ -324,8 +324,14 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
                     console.log('抽你信不信')
                 }              
             }
-            var obj = New Person();
+            var obj = new Person();
              obj.say(); //调用方法
+    2.3.对象属性的调用
+    var balue = obj.name;或者obj[name]
+    -对象遍历
+    for( var key in obj){
+        console.log(obj[key])//只能这种方法
+    }
 ### JSON对象   文本传输格式
     4.   json键/值对组合中的键名写在前面并用双引号 "" 包裹，使用冒号 : 分隔
     1. json字符串转换为json对象 JSON.parse(jsonStr)     

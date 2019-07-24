@@ -1,7 +1,7 @@
 ### 表单<form>
 *登记页面*
 
-<form action="" method="get"> 
+<form action="" method="get/post"> 
 	<!-- action 表单提交地址; method 提交方式:get/post -->
 	<fieldset>
 		<legend>用户基础信息</legend>
@@ -94,7 +94,7 @@
    _blank 空白页面跳转	
 
 ### iframe内联框架 (画中画)
- <iframe src="https://www.baidu.com"  framebord=2px width=200px height=100px target="-blank">
+ <iframe src="https://www.baidu.com"  framebord=2px width=200px height=100px target="_blank">
  </iframe>  <br>
 	- target=""   _self
 			     _top
@@ -178,7 +178,7 @@ a  span
 	- div>p div里边所有的子p
 
 ### 背景图片
-background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll]
+background : [color] [url()]  [no-repeat] [position:左右/上下] [fixed/scroll]
 ### 盒子模型
 - 盒子内部
 	- content:width height
@@ -202,12 +202,16 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 - 相对定位 relative
 - 绝对定位 absolute
 - 固定定位 fixed
-- staic 默认值 无定位
+- static 默认 没有定位 文档流
+ - sticky 粘性定位(relative + fixed)
 - inherit 从父元素继承定位属性
+#### absolute
+1 当父元素设置了除static定位之外的定位的时候，（也就是说父元素可以是absolute relative )，子元素相对于父元素定位，可是相对于父元素哪里定位呢？这个时候，基准是父元素的内容区（也即是content（width+height）+padding区域，不包括border和margin。 
+2 当父元素没有设置定位的时候，子元素相对于body进行定位。 
+3 子元素定位的边界是包括子元素的 整体 = margin + border + padding + content ;的margin外边界为基准进行定位。
 
 
-
-### 弹性盒子flexibl box
+### 弹性盒子flexible box
 	- 组成 flex容器(container) flex项目(item)item
 		水平的主轴(main axis) 与主轴垂直的交叉轴(cross axis)
 	- 容器的属性
@@ -218,16 +222,16 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 			换行的方式:nowrap(默认 不换行) wrop wrop-reverse(换行,第一行在下方)
 		- flex-flow : (默认 row nowrop)
 		- justify-content  项目在主轴上的对齐方式
-			- flex-star 
+			- flex-start 
 			- flex-end 
 			- center 
 			- space-between 挨着两边 项目之间距离相等
 			- space-around
 		- align-items 项目在交叉轴上的对齐方式
-			flex-star flex-end  center 
+			flex-start flex-end  center 
 			baseline(项目 第一行的文字基线) stretch
 		- align-content 多根轴线的对齐方式
-		flex-star flex-end center space-around space-between stretch
+		flex-start flex-end center space-around space-between stretch
 	- 项目的属性
 		- order	项目的排列顺序 123 越小越靠前 默认0
 		- flex-grow	 项目的放大比例 默认0 不放大
@@ -235,7 +239,7 @@ background : [color] [url()]  [no-repeat] [posotion:左右/上下] [fixed/scroll
 		- flex-basis	分配空间之前项目占据主轴空间,默认auto 即项目本来的空间
 		- flex 以上三个的简写 默认( 0 1 auto) 
 		auto(1 1 auto)	none(0 0 auto)
-		- lign-self 单个项目与其它项目不同的对齐方式 	可覆盖align-items属性
+		- align-self 单个项目与其它项目不同的对齐方式 	可覆盖align-items属性
 			- auto(默认,继承父元素align-items属性,若无,等同于stretch)
 			- flex-star 
 			- flex-end
