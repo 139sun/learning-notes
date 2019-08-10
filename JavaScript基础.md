@@ -73,7 +73,7 @@ alert(5>3?'i love you':'you are a bitch');
     - 取[x,y)之间任意数的公式(x,y为整数) Math.floor(Math.random()*(y+1-x[即为个数])+x)
 ### Date()函数
 var timer = Date();//返回一个字符串（string），没有getDate等日期对象方法，内容为当前时间
-    console.log(timer);
+    console.log(timer);//Mon Jul 29 2019 10:49:57 GMT+0800 (中国标准时间)
 var date = new Date();//返回一日期对象，可以调用getDate()，内容为当前时间
 console.log(date);
  var year = date.getFullYear();
@@ -86,6 +86,7 @@ console.log(date);
     var day = date.getDate();//一个月中的第几天
     var stamp = date.getTime();//时间戳
     var timeStr = year +'-' +day+'-' + week;
+    data.toLocaleString()
     console.log(timeStr);
     console.log(stamp);
     console.log(year - stamp);
@@ -176,9 +177,9 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - 数组名.push(新元素)   //从后边添加一个元素,返回新数组长度
     - 数组名.unshift(新元素)//从前边添加一个元素,返回新数组长度
 6. splice(删除并增加)       //改变原数组 //返回删除的数组
-    - 数组.splice(index,index,新元素,新元素)  
+    - 数组.splice(index,num,新元素,新元素)  
     - 若下标从0开始,第一个index为下标,即相对数,否则为绝对数(即索引名);
-    - 第二个index为删除的步长;
+    - 第二个num为删除的步长;
     - 可不添加新元素
 7. 数组名.slice(index,index(从1开始,不包含该元素))    //数组切片,返回切片(不会改变原数组)
     - 参数只有一个,返回值到数组结尾
@@ -205,6 +206,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - str.charAt(5);返回第5个字符
     - str.charCodeAt(5);返回对应字符串的unicode码
     - str.indexOf()  //寻找字符的下标
+    - str.includes()//是否包含true/false
     - str.lastIndexOf()
     - toUpperCase() 大写
 	- toLowerCase() 小写
@@ -262,7 +264,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
         - 通过JS函数构造器Function
             var myFunction = new Function('a','b', 'return a*b'); 
     2. 函数调用
-        - (function(){console.log('干巴爹')})();  //函数自我调用
+        - (function(){console.log('wtf')})();  //函数自我调用
         - 函数名();
     3. 参数
         - 形参,实参

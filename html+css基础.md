@@ -9,10 +9,10 @@
 		<!-- type 属性的不同text password checkbox radio submit(除了下拉框select option)以实现不同的功能 -->
 		<!-- input 单标签 -->
 		用户名: <input readonly name="username" type="text">
-		密码: <input disabled name="password" type="password">
+		密码: <input disabled name="password" type="password" placeholder = "请输入密码>
 		<br>
-		<label for="">
-		<!-- label标签常用于与checkbox或radio关联，以实现点击文字也能选中/取消checkbox或radio -->
+		<label for="id">
+		<!-- label标签常用于与checkbox或radio的id关联，以实现点击文字也能选中/取消checkbox或radio -->
 		<!-- radio 单选框 -->
 			男: <input type="radio" value="1" name="sex">
 		</label>
@@ -54,11 +54,27 @@
 	</fieldset>
 		<input type="submit">
 </form>
+
 ### 表格<table>
+<table border="1">
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
 
 ### 列表
 1. 有序列表/无序列表/自定义列表
 > ul li / ol li  / dl dt/dd
+### 伪类
  	- a:link {color: #FF0000} /* 未访问时的状态 */
  	- a:visited {color: #00FF00} /* 已访问过的状态 */
 	- a:hover {color: #FF00FF} /* 鼠标移动到链接上时的状态 */
@@ -66,10 +82,11 @@
 
 
 ###  img src ="路径问题"
-- 相对路径 相对当前文件的位置 
-	- ../img/xx.png 上一级文件
-	- img/xx.png 下一级文件夹
-	- xx.png 当前文件夹
++ 相对路径 相对当前文件的位置 
+	- ../xx.png 上一级文件
+	- ./img/xx.png 下一级文件夹
+	- ./xx.png 当前文件夹, ./可以省略
+	- /xx.png 根目录
 - 绝对路径 分为本地和网络位置(一般不采用)
 
 ###标签

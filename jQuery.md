@@ -39,7 +39,7 @@
 ### 属性操作
     - $('div').attr('class');获取属性
     - $('div').attr('class','name');设置属性
-    - $('div').removeAttr('class','name');设置属性
+    - $('div').removeAttr('class','name');移除属性
 ### 内容操作
     - val//针对表单   
     //JQuery获取value值为字符串形式，要经过字符串转化为数字之后才能当成数字使用。          
