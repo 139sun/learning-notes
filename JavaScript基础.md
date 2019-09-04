@@ -29,11 +29,12 @@
 4. undefined
  定义了变量 未赋值
 5. null 
+9. Symbol
 复杂数据类型
 6. object 对象
 7. 数组 array
 8. 函数 function
-9. Symbol
+
 
 ### 数据类型转换
 1. 转number (数字类型的字符串)
@@ -42,8 +43,24 @@
     - parseFloat()
 2. 转Boolean
 3. 转string
+### 判断数据类型
+```
+typeof true // "boolean"
+typeof Symbol(1) // "symbol"
+typeof {} // "object"
+typeof function(){} // "function"
+typeof Symbol(1) // "symbol"
+typeof undefined // "undefined"
+typeof null // "object"，出名的坑
+typeof [] // "object"，小坑
+```
+- instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
+- [] instanceof Arrary //true
 
-
+作者：前端绅士
+链接：https://www.imooc.com/article/69870
+来源：慕课网
+本文首次发布于慕课网 ，转载请注明出处，谢谢合作
 
 ### 算数运算
 
@@ -90,7 +107,7 @@ console.log(date);
     console.log(timeStr);
     console.log(stamp);
     console.log(year - stamp);
-
+    data.toLocalString();
 ### 逻辑运算
 && ||  !取反
 逻辑运算符返回的是其中的操作数
@@ -211,14 +228,16 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - toUpperCase() 大写
 	- toLowerCase() 小写
     - str.concat(str2) 拼接字符串
-    - str.substr(起始位置,[取的个数])    //返回截取的片段,不改变元字符串
+    - str.substr(起始位置,[取的个数,无代表到最后])    //返回截取的片段,不改变元字符串
     - str.slice(起始位置,结束位置(不包括)) //返回截取的片段,不改变原字符串
 ### 冒泡排序
 
  // 给定一个数组,由小到大进行排序               //总共需要比较n*(n-1)/2次,n为数组元素个数
+```
         var arr = [52,48,40,12];                 //总共需要移动的次数3n*(n-1)/2次
         for(var j =1 ;j <arr.length ; j++){  //总共循环arr.length-1次,既把右边n-1个数安排妥当
-            for(var i = 0;i < arr.length-j;i++){   //第j次循环,比较arr.length-1-(j-1)=arr.length-j次
+            for(var i = 0;i < arr.length-j;i++){   
+                //第j次循环,比较arr.length-1-(j-1)=arr.length-j次
                 if(arr[i] > arr[i+1]){                    
                     var mid = arr[i];
                     arr[i] = arr[i+1];
@@ -229,7 +248,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
             // console.log(arr);   //循环第j圈的结果,把第arr.length-j的位置安排妥当
         }
         console.log(arr);
-
+```
 
 ### 选择排序
  
@@ -329,7 +348,9 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
             var obj = new Person();
              obj.say(); //调用方法
     2.3.对象属性的调用
-    var balue = obj.name;或者obj[name]
+    var blue = obj.name;或者name属性是变量时用obj[name]
+    - 添加属性 obj.age = 45;
+    - 删除属性 delete obj.name;
     -对象遍历
     for( var key in obj){
         console.log(obj[key])//只能这种方法

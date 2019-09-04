@@ -41,4 +41,9 @@
 ### 动画
 ### 2D转换
 ### 3D效果
+### 过渡效果
+- 使用display:none和display:block是不会有transition动画效果的,可以用下边两种方法解决
+- visibility:hidden => visibility:visible
+- opacity: 0，height:0 =>opacity:1, height: 400px
 ### 本地存储localStorage
+### 正则表达式

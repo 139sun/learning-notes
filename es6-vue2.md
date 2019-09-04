@@ -9,6 +9,7 @@
 -  var fun = (res)=>{return res}等价于
     -var fun =  function (res){return res } 
 - res为参数,一个的时候可以省略(),一个return,可以省略{}和return
+- 取代匿名及立即执行函数
 ### var let const
     - var : 变量声明提升  声明未赋值undefined
     - let :块级作用域{},域外不能访问,但可访问上级作用域的声明,
@@ -17,16 +18,18 @@
     - const: 声明只读常量,一旦声明,常量不能更改,复杂数据类型可更改其地址指向数据
 ### 函数默认值
    - 设置形参默认值 function fun(a,b = "hello,world"){}
-### 数据解构赋值
-    - 变量解构
+### 变量解构赋值
+- 变量解构
         ` [ ,a,b,c] = [2, ,"vue"] `
         - 变量不用事先声明
-        - 赋值多去少补undefined
-    - 对象解构
+        - 赋值多去除少了就补undefined
+- 对象解构
     var { title, name } = {
             name: "李白",
             title: "天子门生",
         };
+    - es6中,若对象的key与value相同,可简写成一个 
+    - 冒号后面的属性值才是我们需要赋值的变量，解构会在右侧表达式对象中找到和左侧对象相同的属性名，以该属性值为对应变量赋值，如果没找到，那么该变量值为undefined
 ### map数据结构和set 数据结构
 - set 类似于数组,没有重复值,本身是个构造函数
     - Set结构实例属性 set.size
@@ -74,7 +77,7 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
 ### 数组拓展
 ####
 - console.log(NaN === NaN)//false
-#### 拓展运算符 ...
+#### 拓展运算符 ... (称作rest/spread)
 - 用作数组去重[...new Set(arr)]
 - 数组拼接[...arr,...arr]
 - 将类对象(例如arguments)转换为真正的数组Array.from(set);
@@ -93,7 +96,7 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
 - filter() 返回所有符合条件的元素的新数组
 
 - includes() 用来判断一个数组是否包含一个指定的值，如果是返回 true
-
+      -  arr.includes(srt),不能对每个子项进行操作
 - reduce()   arr.reduce(function(prev,cur,index,arr){...}, init);
     - function() 回调函数
     - prev 表示上一次调用回调时的返回值或数组的第一个元素，设置初始值init时为init,必须参数

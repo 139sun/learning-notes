@@ -30,12 +30,13 @@
 
 ## DOM操作
 ### 样式
-    - $('node').css()获取
+    - $('node').css('display')获取
     -   .css('color','red') 设置
     -   .css{       //设置多个样式
         color:'red',
         fontSize:'15px'
     }
+    - $("#id").show()表示display:block, $("#id").hide()表示display:none; $("#id").toggle()切换元素的可见状态
 ### 属性操作
     - $('div').attr('class');获取属性
     - $('div').attr('class','name');设置属性
@@ -109,6 +110,7 @@
     js原生的onclick对后来添加的元素不起作用,只能用jQuery的on方法,因为
     onclick绑定事件在前,新加载出来的事件在后,而on是通过绑定父元素
     再通过selector来判断寻找新元素
+- ps:$('div').click(function(){})在动态生成绑定不管用
 ### 解绑
     $(selector).off( “click”, “xx” ,fn);
 ### 触发

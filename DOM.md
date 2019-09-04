@@ -121,7 +121,7 @@
          }
         }
 ### 设置class属性
-        - element.className
+        - element.className 获取class属性
         - element.className = 'className';
 
 ## 操作内容         

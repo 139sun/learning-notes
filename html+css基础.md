@@ -119,12 +119,24 @@
 
 
 ###元素种类
-- 块状元素 自动换行 设置宽高有效
-ul ol div  table form h p
-- 行内块元素 不会自动换行 设置宽高有效(padding margin 左右有效,上下无效)
-img input button
+- 块状元素 自动换行 设置宽高有效ul-li div  table form h p
+	- (1)能够识别宽高
+　　- (2)margin和padding的上下左右均对其有效
+	- (3)可以自动换行
+　　- (4)多个块状元素标签写在一起，默认排列方式为从上至下　　　　　　　　　　　　　　
+	- 宽度缺省是它父级元素的100%，除非设定一个宽度
+	- 可以容纳其他内联元素或者其他块元素
+- 行内块元素 不会自动换行 设置宽高有效(padding margin 有效)
+	- img input button
+	- (1)不自动换行
+	- (2)能够识别宽高
+	- (3)默认排列方式为从左到右
 - 行内元素 不会自动换行 设置宽高无效
-a  span 
+	- a  span 修饰字体<b>和<i>标签，还有<sub>和<sup>这两个标签可以直接做出平方的效果
+	- 对margin仅设置左右方向有效，上下无效；padding设置上下左右都有效，即会撑大空间
+	- 宽度与内容一样宽，且不可改变
+	- 设置高度无效，可以通过设置line-height来设置
+	- 一般情况下，行内元素只能包含数据和其他行内元素
 
 ###元素类型转换 display:
 - block 
@@ -134,10 +146,6 @@ a  span
 ###css单位
 - 长度 px em %
 - 颜色 预定义:silver green 十六进制:#000/#fff 或者rgba(0,0,0,0.5)
-
-
-
-
 
 #属性及其继承关系[链接](https://www.jianshu.com/p/fbfc6c751e34)
 有继承性的属性：      
@@ -231,7 +239,7 @@ background : [color] [url()]  [no-repeat] [position:左右/上下] [fixed/scroll
 ### 弹性盒子flexible box
 	- 组成 flex容器(container) flex项目(item)item
 		水平的主轴(main axis) 与主轴垂直的交叉轴(cross axis)
-	- 容器的属性
+	- 容器的属性(作用于子元素)
 		- flex-direction
 			- 决定主轴(即项目)的方向
 			- row(默认)	row-reverse column colunm-reverse
@@ -249,7 +257,7 @@ background : [color] [url()]  [no-repeat] [position:左右/上下] [fixed/scroll
 			baseline(项目 第一行的文字基线) stretch
 		- align-content 多根轴线的对齐方式
 		flex-start flex-end center space-around space-between stretch
-	- 项目的属性
+	- 项目的属性(作用于元素自身)
 		- order	项目的排列顺序 123 越小越靠前 默认0
 		- flex-grow	 项目的放大比例 默认0 不放大
 		- flex-shrink 项目的缩小比例  默认1 空间不足比例缩小
