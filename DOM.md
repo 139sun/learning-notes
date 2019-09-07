@@ -130,7 +130,7 @@
     - node.innerHTML    = '<img scr= "" atl="">'
     - 获取内容 node.innerHTML
 ### 监听器
-    - //                        action动作事件; 执行函数 ;捕获(默认)或者冒泡
+    - //action动作事件; 执行函数 ;捕获(默认)或者冒泡
     - element.addEventListener(action,function(){},false/true)
     - removeEventListener
 ### 定时器

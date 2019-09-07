@@ -107,9 +107,10 @@
 
 ## 事件机制
 ### 事件绑定
-    js原生的onclick对后来添加的元素不起作用,只能用jQuery的on方法,因为
+-   js原生的onclick对后来添加的元素不起作用,只能用jQuery的on方法,因为
     onclick绑定事件在前,新加载出来的事件在后,而on是通过绑定父元素
     再通过selector来判断寻找新元素
+- $('div').on('click',{'name':'孙悟空'},function(e){})
 - ps:$('div').click(function(){})在动态生成绑定不管用
 ### 解绑
     $(selector).off( “click”, “xx” ,fn);

@@ -23,6 +23,10 @@
          - null
         - undefined
         - false
+- 空数组[],空对象{}，转的布尔值时都为true
+- NaN == NaN //false
+- undefined == undefined//true
+- null == null //true
 3. 字符串 string
 
 
@@ -57,11 +61,6 @@ typeof [] // "object"，小坑
 - instanceof 运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性。
 - [] instanceof Arrary //true
 
-作者：前端绅士
-链接：https://www.imooc.com/article/69870
-来源：慕课网
-本文首次发布于慕课网 ，转载请注明出处，谢谢合作
-
 ### 算数运算
 
 ### 三元运算符
@@ -85,10 +84,12 @@ alert(5>3?'i love you':'you are a bitch');
 - Math.pow(2,3) 冥函数
 - Math.max()
 - Math.min()
+- abs() 方法可返回数的绝对值
 - Math.round() 四舍五入(不严格)
 - Math.random()[0,1)之间任意数
     - 取[x,y)之间任意数的公式(x,y为整数) Math.floor(Math.random()*(y+1-x[即为个数])+x)
 ### Date()函数
+```
 var timer = Date();//返回一个字符串（string），没有getDate等日期对象方法，内容为当前时间
     console.log(timer);//Mon Jul 29 2019 10:49:57 GMT+0800 (中国标准时间)
 var date = new Date();//返回一日期对象，可以调用getDate()，内容为当前时间
@@ -108,6 +109,7 @@ console.log(date);
     console.log(stamp);
     console.log(year - stamp);
     data.toLocalString();
+```
 ### 逻辑运算
 && ||  !取反
 逻辑运算符返回的是其中的操作数
@@ -164,7 +166,7 @@ console.log(a2);//cat
           newArr[0] = 345;
           newArr[1] = 89;
         - 一个数字参数构造 创建指定长度的空数组(多个数字参数视为元素)
-            var arr = new Array(5);
+            var arr = new Array(5);//元素为undefined
         - 带有初始化数据构造函数,创建数组,并初始化数据()
          var newArr = new Array(345,89);
     2. 字面量/表达式
@@ -214,10 +216,9 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
 10. 查找元素在数组中的索引 ,没找到返回-1
         - arr.indexOf(元素)//无法识别NaN
         - arr.lastIndexOf(元素)从后找
-11.清空数组
+11. 清空数组
     - arr = [];
     - arr.length = 0; 
-
 ### string方法
     - str[0];
     - str.charAt(5);返回第5个字符
