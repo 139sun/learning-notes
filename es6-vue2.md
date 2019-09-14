@@ -144,7 +144,7 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
 - 点击元素改变背景颜色
 
 #### 双括号插值{{}} 单向绑定
-
+- 在vue的js中引入图片资源 应该使用require
 #### v-model 对表单双向数据绑定
 - <label for="checkbox">{{ checked }}</label> 绑定区域id所属元素,实现定焦
 - 三个表单修饰符
@@ -188,13 +188,16 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
 - beforeCreat
 - created
 - beforeMount
-- mounted
++ mounted
+    + vm.$nextTick( [callback] )
+    + 将回调延迟到下次 DOM 更新循环之后执行
 - beforeUpdate
 - updated
 - beforeDestroy
 - destroyed
+
 ### 组件components
-- 全局组件
++ 全局组件
     - Vue.component("com",{ template:"#com"})
 - 局部组件
 - template写法
@@ -283,7 +286,7 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
 ### 边界情况
 - 根实例this.$root
 - 父组件 this.$parent
-- ref= 'name' ;this.$refs.name
+- ref= 'name' ;this.$refs.name/vm.$refs.name;
     - 用在子组件上表示该子组件,可调用该组件属性和方法
     - 用在dom元素上表示该DOM元素
 - 混入

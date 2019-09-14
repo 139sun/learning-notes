@@ -37,14 +37,15 @@
 - 一个字符串模板作为 Vue 实例的标识使用。模板将会 替换 挂载的元素。
     挂载元素的内容都将被忽略，除非模板的内容有分发插槽
 #### main.js 入口文件是初始化vue实例并使用需要的插件,加载各种公共组件
-- render渲染函数 
-- render: function (createElement) {
++ render渲染函数 
++ render: function (createElement) {
   return createElement('h1', this.blogTitle)
 }
-- h1 创建的根节点VNode(虚拟节点)
-- this.blogTitle,子级虚拟节点VNodes
--  render: h => h(App) h的实参为createElement函数
-- app.$mount("#app")  手动挂载到DOM(#app)元素上,取代{el:'#app'}属性
++ h1 创建的根节点VNode(虚拟节点)
++ this.blogTitle,子级虚拟节点VNodes
++ render: h => h(App) h的实参为createElement函数
++ app.$mount("#app")  手动挂载到DOM(#app)元素上,取代{el:'#app'}属性
+
 #### package.json 是包管理配置文件 存放的是项目所需要的依赖
 #### App.vue
 - 是我们的主组件，页面入口文件 ，所有页面都是在App.vue下进行切换的。
@@ -91,16 +92,18 @@ var fun = function(){}
     -  <router-view /> //容器,存放对应的组件
 + js跳转 menthods:{goto:{this.$router.push({path:"/home"})}}
     - 字符串形式 this.$router.push("/home")
+
 ##### 传值query  相当于 get 请求
+
 + 路由query传值 <router-link to="/user?user = '诸葛亮'&age = 44">user页面</router-link>
     - 获取传值 console.log(this.$route.query)
-+ js传值 menthods:{goto:{this.$router.push{path:"/home",query:{user = '诸葛亮'}}}}
++ js传值 methods:{goto:{this.$router.push{path:"/home",query:{user = '诸葛亮'}}}}
 ##### 动态路由params  相当于post请求
 - 仅传递id值,id可随意命名,共用一个组件
 - router.js =>path:"/home/:id" 
 - home.vue =><router-link to="/home/1"></router-link>
 + 传值<router-link :to="{name:'info',params:{id:4}}"></router-link>
-    - 动态路由传值path 与 params不能共存,所以使用命名路由的方式进行跳转
+    - 动态路由传值path 与 params不能共存,所以使用命名路由的方式进行跳转,params可以省略
     - js动态传值 this.$router.push({name:"info",params:{id:5}});
 <!-- 获取params传递过来的参数 this.$route.params.id -->
 #### 变量跳转
@@ -124,13 +127,13 @@ var fun = function(){}
 ],
 - <router-link to="/home/user/id"></route-link>
 ### 定义routes[]
-- mode:history/hash
+- mode:history/hash //history模式需要后代配置
 - class激活重命名router-link-active=> linkActiveClass:"v-active" 
 -  routes配置重定向 redirect:"/user/phone" 
 - this.$route 当前路由 this.$router所有路由
 ### 命名路由
 - routes 配置中给定name属性:"user"
-- <router-link to="{name = 'user',params = {userId:123}}"></router-link>
+- <router-link :to="{name = 'user',params = {userId:123}}"></router-link>
 
 ### 导航守卫
 #### 全局守卫
@@ -159,7 +162,7 @@ var fun = function(){}
     - component:() => import( '@/view/mine/mine.vue')
 ## Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式
 ### state
-- 全局的数据仓库 获取this.$store.state.age
++ 全局的数据仓库 获取this.$store.state.age
 ### mutation 同步函数
 - 全局方法  在methods事件中调用 this.$store.commit('handle')
 - handle(state,params){}
