@@ -176,3 +176,6 @@ for(var i=0;i<$('.dot').length;i++){
             console.log( $('.dot')[this.index])
          }
     }
+### api
+document.write('</br>') 相较于下没有空格
+document.writeln('</br>')

@@ -231,6 +231,7 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
     - str.concat(str2) 拼接字符串
     - str.substr(起始位置,[取的个数,无代表到最后])    //返回截取的片段,不改变元字符串
     - str.slice(起始位置,结束位置(不包括)) //返回截取的片段,不改变原字符串
+    - parseInt(string, radix) parseInt() 函数可解析一个字符串，并返回一个整数，radix可选，2，10，16进制。
 ### 冒泡排序
 
  // 给定一个数组,由小到大进行排序               //总共需要比较n*(n-1)/2次,n为数组元素个数
@@ -369,3 +370,6 @@ arr3 = arr1.concat(arr2);                       //原有数组不会改变
         for(var key in jsonObj){
            console.log(jsonObj[key]); //key为变量,必须加[]
        }
+
+    5. localStorage.setItem('name',JSON.stringify('诸葛亮'))
+        JSON.parse(localStorage.getItem('name')) ;

@@ -1,7 +1,11 @@
-### 函数
+
+###  函数
+
 - fun:function(val){}//对象(方法)
 - 简写fun(val){}    //函数
+
 ### 箭头函数
+
 - 箭头函数没有自己的this，arguments，super或 new.target。
 - 这些函数表达式更适用于那些本来需要匿名函数的地方，并且它们不能用作构造函数。
 - tip:setTimeout 定时器内this指向window,
@@ -10,27 +14,39 @@
     -var fun =  function (res){return res } 
 - res为参数,一个的时候可以省略(),一个return,可以省略{}和return
 - 取代匿名及立即执行函数
+
 ### var let const
+
     - var : 变量声明提升  声明未赋值undefined
     - let :块级作用域{},域外不能访问,但可访问上级作用域的声明,
         同一作用域不能重复声明,但赋值可更改
         全局变量不属于window对象,不能使用window.来访问
     - const: 声明只读常量,一旦声明,常量不能更改,复杂数据类型可更改其地址指向数据
+
 ### 函数默认值
-   - 设置形参默认值 function fun(a,b = "hello,world"){}
+
+- 设置形参默认值 function fun(a,b = "hello,world"){}
+
 ### 变量解构赋值
+
 - 变量解构
+
         ` [ ,a,b,c] = [2, ,"vue"] `
         - 变量不用事先声明
         - 赋值多去除少了就补undefined
-- 对象解构
+
++ 对象解构 
+
     var { title, name } = {
             name: "李白",
             title: "天子门生",
         };
+
     - es6中,若对象的key与value相同,可简写成一个 
-    - 冒号后面的属性值才是我们需要赋值的变量，解构会在右侧表达式对象中找到和左侧对象相同的属性名，以该属性值为对应变量赋值，如果没找到，那么该变量值为undefined
+    - 冒号后面的属性值才是我们需要赋值的变量，解构会在右侧表达式对象中找到和左侧对象相同的属性名，以该属性   值为对应变量赋值，如果没找到，那么该变量值为undefined
+       
 ### map数据结构和set 数据结构
+
 - set 类似于数组,没有重复值,本身是个构造函数
     - Set结构实例属性 set.size
     - Set结构实例方法: 
@@ -43,7 +59,9 @@
     - map.delete(key) // 同理,同样复杂key值的两个实例,在map结构中会被视为两个键
     - map.has(key)
     - map.clear()
+
 ### Promise函数
+
 - 从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。
 Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理
 - 同样是构造函数
@@ -103,6 +121,8 @@ Promise.all([ajax1,ajax2,a]).then(function(val){console.log(val)})
     - cur 当前处理的数组元素,当前选项item,设置init时为第一个元素,否则为第二个元素 ,必须参数
     - index 当前处理元素的下标,有init初始值为0,否则为1,非必须
     - arr 当前数组,非必须
++ array.fill(value, start, end)
+
 ## vue
 ### 声明式渲染
 - 命令式渲染 获取节点元素,操作DOM赋值innerHTML完成渲染

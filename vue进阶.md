@@ -1,4 +1,7 @@
 ### vue cli 脚手架安装
++ 安装淘宝镜像  npm install -g cnpm --registry=https://registry.npm.taobao.org
++ 全局安装vue-cli cnpm i vue-cli -g
++ 检验版本 vue --version
 - babel es6转译es5
 ### 新建项目
 - vue create my-project
